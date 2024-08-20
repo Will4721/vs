@@ -27,11 +27,16 @@
     place-items: center;
     border:1px solid white;
 }
-#imagebox{
-    background-image: url(./assets/matt-hardy-6ArTTluciuA-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
+.halfbox{
+    grid-template-columns: 1fr 1fr;
 }
+#rightimage{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/le\ bullshit.jpg);
+    background-size: cover;
+}
+
 #page1{
     background-color: rgb(17, 175, 214);
 }
@@ -40,7 +45,15 @@
 }
 #page3{
     background-color: green;
+    grid-template-columns: 4fr 2fr 1fr;
 }
+#page3 div{
+    width: 100%;
+    height: 100%;
+}
+
+
+
 #page4{
     background-color: red;
 }
