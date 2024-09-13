@@ -1,19 +1,15 @@
 let currentPage = 1
 
-
 let pages //array med alle elementer med class = page 
 let menuItems //array med alle menupunkterne  
-
 
 function setup(){
     setupMenuStructure()
 }
 
-
 function setupMenuStructure(){
     pages = selectAll('.page')
     menuItems = selectAll('.menuitem')
-
 
     //menu items skal reagere ved at skifte side
     for( m of menuItems ){
@@ -27,7 +23,6 @@ function setupMenuStructure(){
         })
     }
 
-
     //shiftPage er funktionen der tager et tal og skifter til en side        
     shiftPage(currentPage)
     //vent to sekunder og sæt så klassen "hidden" på headeren - så menuen bliver væk
@@ -35,16 +30,16 @@ function setupMenuStructure(){
         select('header').addClass('hidden')
     }, 10000)
 
-
 }
 
+function pageOne(){
+    console.log('Side 1 funktionen kaldes')
+    
+}
 
 function pageTwo(){
-
-
     //Først kalder vi server API'ets endpoint
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-
 
     //så venter vi på serverens promise, der kommer tilbage med .then()
     .then(
@@ -64,14 +59,11 @@ function pageTwo(){
     )
 }
 
-
 function pageThree(){
 }
 
-
 function pageFour(){
 }
-
 
 function shiftPage(num){
     if(num == "ArrowLeft"){
@@ -81,11 +73,9 @@ function shiftPage(num){
         num = currentPage + 1
     }
 
-
     if(isNaN(num) || num > pages.length || num == 0){
         return
     }
-
 
     select("#page" + currentPage).removeClass('visible')
     select("#menu" + currentPage).removeClass('active')
@@ -93,15 +83,19 @@ function shiftPage(num){
     select("#page" + currentPage).addClass('visible')
     select("#menu" + currentPage).addClass('active')
 
-
+    if(currentPage == 1) {
+        pageOne()
+    }
     if(currentPage == 2) {
         pageTwo()
     }
     if(currentPage == 3) {
         pageThree()
     }
+    if(currentPage == 4) {
+        pageFour()
+    }
 }
-
 
 function keyPressed(){
     console.log(key)
