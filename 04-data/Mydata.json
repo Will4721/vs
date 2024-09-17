@@ -1,7 +1,8 @@
 {
-    "Name" : "Simon Mosegris",
-    "Description" : "Dette er data fra den lokale fil mydata.json. De ligger i Javascript Object Notation (JSON), og er hentet med funktionen fetch.",
-    "formerHaircolors": ["purple", "black", "orange"],
-    "happy": true,
-    "image" : "./assets/simon.jpeg"
+    "Name":"William",
+    "Description":"dette er data fra lokale fil mydata.json. De ligger i Jaavscrpit Object Notation (Json), og er hentet med funktionen fetch ",
+    "FormerHaircolors":["purple", "black","orange"],
+    "Happy":true
+        
+
 }
