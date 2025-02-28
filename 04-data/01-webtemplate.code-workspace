@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": "01-webtemplate",
+			"path": "../01-webtemplate"
+		},
+		{
+			"name": "01 web template css tricks",
+			"path": "../01 web template css tricks"
+		},
+		{
+			"path": "../03-webapp"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Downloads/Programmering-main/Programmering-main/API"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vs studio code"
+	}
+}
